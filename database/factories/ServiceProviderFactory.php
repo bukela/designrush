@@ -24,7 +24,7 @@ class ServiceProviderFactory extends Factory
         return [
             'name' => $this->faker->company,
             'description' => $this->faker->paragraph(3),
-            'logo_path' => sprintf('https://placehold.co/200x200/2563EB/ffffff?text=Logo+%s', mt_rand(1, 100)),
+            'logo_path' => sprintf('storage/logos/logo-%s.jpg', mt_rand(1, 15)),
             'category_id' => Category::inRandomOrder()->first()->id ?? Category::factory(),
         ];
     }

@@ -90,3 +90,108 @@
     border-radius: 4px;
     background-color: white;
 }
+
+        body {
+            font-family: 'Figtree', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #1f2937;
+            font-size: 2rem;
+        }
+
+        .main-content {
+            min-height: calc(100vh - 200px);
+        }
+
+        .pagination {
+            font-size: 0.95rem;
+        }
+
+        .pagination .pager {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .pagination .pager ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            gap: 0.5rem;
+        }
+
+        .pagination .pager li {
+            display: inline;
+        }
+
+        .pagination .pager a,
+        .pagination .pager span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+            height: 40px;
+            padding: 0 12px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #6b7280;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .pagination .pager a:hover {
+            background-color: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+
+        .pagination .pager .active span {
+            background-color: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+
+        .pagination .pager .disabled span {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .pagination .page-link {
+            padding: 0.25rem 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .pagination .page-item.active .page-link {
+            background-color: #3b82f6;
+            border-color: #3b82f6;
+            color: #fff;
+        }
+
+        .w-5 {
+            width: 1.25rem !important;
+        }
+        .h-5 {
+            height: 1.25rem !important;
+        }
+        .pagination .page-link svg {
+            fill: currentColor;
+        }

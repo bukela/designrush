@@ -4,29 +4,31 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\ServiceProvider;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
+use App\Services\ServiceProviderService;
+use App\Http\Requests\ServiceProviderIndexRequest;
 
 class ServiceProviderController extends Controller
 {
-    public function index()
+    protected ServiceProviderService $service;
+
+    public function __construct(ServiceProviderService $service)
+    {
+        $this->service = $service;
+    }
+
+    public function index(ServiceProviderIndexRequest $request)
     {
         $categories = Category::all();
-        $serviceProviders = ServiceProvider::with('category')->paginate(10);
+        $serviceProviders = $this->service->indexWithCategory($request->validated());
         return view(
             'service_providers.index',
-            [
-                'serviceProviders' => $serviceProviders,
-                'categories' => $categories,
-            ]
+             compact('serviceProviders', 'categories')
         );
     }
 
-    public function show()
+    public function show($id)
     {
-        $serviceProviders = ServiceProvider::with('category')->paginate(10);
-        return view('service_providers.index', ['serviceProviders' => $serviceProviders]);
+        $provider = ServiceProvider::with('category')->findOrFail($id);
+        return view('service_providers.show', compact('provider'));
     }
 }
