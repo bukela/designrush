@@ -50,3 +50,18 @@ Run a specific test file:
 ```bash
 php artisan test tests/Feature/ServiceProviderTest.php
 ```
+
+### Implemented Features
+
+- **MVC Pattern**: Follows Laravel's MVC architecture for clean separation of concerns
+- **Service Layer**: Business logic is encapsulated in service classes for better maintainability
+- **Eager Loading**: Relationships are eager loaded to prevent N+1 query problems
+- **Pagination**: Large datasets are paginated to reduce memory usage
+- **Asset Optimization**: JavaScript and CSS are minified and versioned
+
+### Future Enhancements
+
+- **Implement Caching**: Add Redis for faster response times (e.g. for Categories)
+- **Rate Limiting**: Maybe implement rate limiting for public endpoints
+- **Static Analysis**: Integrate PHPStan or Psalm
+- **CI/CD Pipeline**: Set up GitHub Actions for automated testing and deployment
