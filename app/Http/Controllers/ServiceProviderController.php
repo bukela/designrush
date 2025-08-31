@@ -26,7 +26,7 @@ class ServiceProviderController extends Controller
         );
     }
 
-    public function show($id)
+    public function show(int $id)
     {
         $provider = ServiceProvider::with('category')->findOrFail($id);
         return view('service_providers.show', compact('provider'));

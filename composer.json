@@ -45,10 +45,6 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ],
-        "app-setup": [
-            "php artisan migrate:fresh --seed",
-            "php artisan storage:link"
         ]
     },
     "extra": {
