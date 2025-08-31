@@ -2,13 +2,6 @@
 
 A Laravel application for managing and displaying service providers with category filtering.
 
-## Features
-
-- List all service providers with pagination
-- Filter service providers by category
-- View detailed information about each service provider
-- Responsive design for all devices
-
 ## API Endpoints
 
 ### List Service Providers
