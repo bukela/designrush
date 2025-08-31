@@ -18,8 +18,8 @@ class ServiceProviderController extends Controller
 
     public function index(ServiceProviderIndexRequest $request)
     {
-        $categories = Category::all();
-        $serviceProviders = $this->service->indexWithCategory($request->validated());
+        $categories = Category::select('id', 'name')->get();
+        $serviceProviders = $this->service->indexWithCategories($request->validated());
         return view(
             'service_providers.index',
              compact('serviceProviders', 'categories')

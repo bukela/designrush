@@ -6,7 +6,7 @@ use App\Models\ServiceProvider;
 
 class ServiceProviderService
 {
-    public function indexWithCategory(array $data): \Illuminate\Contracts\Pagination\LengthAwarePaginator
+    public function indexWithCategories(array $data): \Illuminate\Contracts\Pagination\LengthAwarePaginator
     {
         return ServiceProvider::with('category')
             ->when(!empty($data['category']), function ($query) use ($data) {

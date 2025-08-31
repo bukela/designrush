@@ -31,7 +31,7 @@ class ServiceProviderServiceTest extends TestCase
     public function testIndexWithCategoryReturnsFilteredResults(): void
     {
         $service = new ServiceProviderService();
-        $result = $service->indexWithCategory(['category' => $this->category1->id]);
+        $result = $service->indexWithCategories(['category' => $this->category1->id]);
 
         $this->assertEquals(3, count($result->items()));
         foreach ($result as $provider) {
@@ -42,7 +42,7 @@ class ServiceProviderServiceTest extends TestCase
     public function testIndexWithoutCategoryReturnsAllResults(): void
     {
         $service = new ServiceProviderService();
-        $result = $service->indexWithCategory([]);
+        $result = $service->indexWithCategories([]);
 
         $this->assertEquals(10, count($result->items()));
     }
