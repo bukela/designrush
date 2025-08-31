@@ -61,6 +61,7 @@ php artisan test tests/Feature/ServiceProviderTest.php
 
 ### Future Enhancements
 
+- **Implement CRUD**: Add CRUD operations for Service Providers and Categories
 - **Implement Caching**: Add Redis for faster response times (e.g. for Categories)
 - **Rate Limiting**: Maybe implement rate limiting for public endpoints
 - **Static Analysis**: Integrate PHPStan or Psalm
