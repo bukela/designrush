@@ -9,6 +9,13 @@ class ServiceProvider extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'description',
+        'logo_path',
+        'category_id'
+    ];
+
     public function category()
     {
         return $this->belongsTo(Category::class);

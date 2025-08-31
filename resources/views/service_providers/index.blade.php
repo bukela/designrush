@@ -100,5 +100,6 @@
                 <p>No providers are available at the moment.</p>
             </div>
         @endforelse
+        {{  $serviceProviders->links()  }}
     </div>
 @endsection

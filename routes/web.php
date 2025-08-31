@@ -18,5 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/service-providers', [ServiceProviderController::class, 'index'])->name('providers.index');
+Route::get('/service-providers', [ServiceProviderController::class, 'index'])->name('service-providers.index');
+Route::get('/service-providers/{provider}', [ServiceProviderController::class, 'show'])->name('service-providers.show');
 
