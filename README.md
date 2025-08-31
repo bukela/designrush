@@ -2,6 +2,28 @@
 
 A Laravel application for managing and displaying service providers with category filtering.
 
+## Features
+
+- List all service providers with pagination
+- Filter service providers by category
+- View detailed information about each service provider
+- Responsive design for all devices
+
+## API Endpoints
+
+### List Service Providers
+- **URL**: `/service-providers`
+- **Method**: `GET`
+- **Query Parameters**:
+  - `category` (optional, integer) - Filter by category ID
+  - `page` (optional, integer) - Page number for pagination
+
+### View Service Provider
+- **URL**: `/service-providers/{id}`
+- **Method**: `GET`
+- **URL Parameters**:
+  - `id` - (integer) The ID of the service provider
+
 ## Setup Instructions
 
 1. Clone the repository
